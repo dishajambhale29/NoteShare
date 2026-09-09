@@ -1,0 +1,217 @@
+
+
+.register-page {
+  min-height: 100vh;
+
+  background: #0d0f14;
+  color: #f1f1f1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 25px;
+
+  font-family: Arial, sans-serif;
+}
+
+.register-card {
+  width: 100%;
+  max-width: 430px;
+
+  background: #171a22;
+
+  border: 1px solid #292e3a;
+
+  border-radius: 12px;
+
+  padding: 35px;
+
+  box-sizing: border-box;
+}
+
+
+.register-card h1 {
+  text-align: center;
+
+  margin: 0 0 10px;
+
+  color: #f1f1f1;
+
+  font-size: 28px;
+
+  font-weight: 700;
+}
+
+
+
+.register-subtitle {
+  text-align: center;
+
+  margin: 0 0 30px;
+
+  color: #8e99b2;
+
+  font-size: 15px;
+}
+
+
+/* ================= INPUT GROUP ================= */
+
+.register-input-group {
+  margin-bottom: 20px;
+}
+
+.register-input-group label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #dce5ff;
+
+  font-size: 14px;
+
+  font-weight: 600;
+}
+
+
+
+.register-input-group input {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  background: #0d0f14;
+
+  color: #f1f1f1;
+
+  border: 1px solid #303643;
+
+  border-radius: 10px;
+
+  padding: 13px 15px;
+
+  font-size: 16px;
+
+  outline: none;
+
+  transition: 0.2s;
+}
+
+
+.register-input-group input::placeholder {
+  color: #727b90;
+}
+
+
+.register-input-group input:focus {
+  border-color: #5788ff;
+
+  box-shadow: 0 0 0 2px rgba(86, 133, 245, 0.12);
+}
+
+.register-btn {
+  width: 100%;
+
+  background: #5685f5;
+
+  color: white;
+
+  border: none;
+
+  border-radius: 9px;
+
+  padding: 12px 20px;
+
+  font-size: 16px;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+
+  margin-top: 5px;
+}
+
+
+.register-btn:hover {
+  background: #4676e8;
+}
+
+.register-message {
+  background: #2a1b20;
+
+  border: 1px solid #59303a;
+
+  color: #ff8f9c;
+
+  border-radius: 9px;
+
+  padding: 12px 14px;
+
+  margin-bottom: 20px;
+
+  font-size: 14px;
+
+  text-align: left;
+}
+
+
+/* ================= LOGIN SECTION ================= */
+
+.login-section {
+  text-align: center;
+
+  margin-top: 25px;
+
+  padding-top: 22px;
+
+  border-top: 1px solid #292e3a;
+
+  color: #8d96ad;
+
+  font-size: 14px;
+}
+
+
+.login-section button {
+  margin-left: 5px;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: #4d86ff;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+
+.login-section button:hover {
+  text-decoration: underline;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 500px) {
+
+  .register-page {
+    padding: 20px;
+  }
+
+  .register-card {
+    padding: 28px 22px;
+  }
+
+  .register-card h1 {
+    font-size: 25px;
+  }
+
+}
+

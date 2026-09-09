@@ -1,0 +1,183 @@
+.note-view-page {
+  min-height: 100vh;
+  background: #0d0f14;
+  color: #f1f1f1;
+  padding: 35px 25px;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+
+.note-view-card {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+
+  background: #171a22;
+  border: 1px solid #292e3a;
+  border-radius: 12px;
+
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+
+.note-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Title section */
+
+.note-title-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.note-icon {
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #202532;
+  border: 1px solid #303643;
+  border-radius: 10px;
+
+  font-size: 23px;
+  flex-shrink: 0;
+}
+
+.note-title-section h1 {
+  margin: 0 0 5px;
+
+  font-size: 27px;
+  font-weight: 700;
+
+  color: #f1f1f1;
+}
+
+.note-title-section p {
+  margin: 0;
+
+  color: #8e99b2;
+  font-size: 14px;
+}
+
+/* Copy Button */
+
+.copy-btn {
+  background: #5685f5;
+  color: white;
+
+  border: none;
+  border-radius: 9px;
+
+  padding: 12px 20px;
+
+  font-size: 15px;
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.copy-btn:hover {
+  background: #4676e8;
+}
+
+/* Divider */
+
+.note-divider {
+  height: 1px;
+  background: #292e3a;
+
+  margin: 25px 0;
+}
+
+/* Note Content */
+
+.note-content {
+  background: #0d0f14;
+
+  border: 1px solid #303643;
+  border-radius: 10px;
+
+  padding: 22px;
+
+  min-height: 350px;
+
+  box-sizing: border-box;
+}
+
+.note-content pre {
+  margin: 0;
+
+  white-space: pre-wrap;
+  word-wrap: break-word;
+
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+
+  color: #dce5ff;
+}
+
+/* Loading */
+
+.note-loading {
+  width: 100%;
+  max-width: 1000px;
+
+  margin: 0 auto;
+
+  background: #171a22;
+  border: 1px solid #292e3a;
+  border-radius: 12px;
+
+  padding: 30px;
+
+  box-sizing: border-box;
+
+  color: #8e99b2;
+  font-size: 16px;
+}
+
+/* Responsive */
+
+@media (max-width: 600px) {
+
+  .note-view-page {
+    padding: 20px 15px;
+  }
+
+  .note-view-card {
+    padding: 20px;
+  }
+
+  .note-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .note-title-section h1 {
+    font-size: 23px;
+  }
+
+  .copy-btn {
+    width: 100%;
+  }
+
+  .note-content {
+    padding: 16px;
+    min-height: 300px;
+  }
+
+  .note-content pre {
+    font-size: 15px;
+  }
+}
