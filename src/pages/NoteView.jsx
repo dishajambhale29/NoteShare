@@ -13,11 +13,12 @@ function NoteView() {
   }, [noteId]);
 
   const loadNote = async () => {
-    const { data, error } = await supabase
-      .from("notes")
-      .select("*")
-      .eq("id", noteId)
-      .single();
+   const { data, error } = await supabase
+  .from("notes")
+  .select("*")
+  .eq("group_id", groupId)
+  .gt("expires_at", new Date().toISOString())
+  .order("created_at", { ascending: false });
 
     if (error) {
       console.log(error);

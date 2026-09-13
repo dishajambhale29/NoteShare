@@ -11,36 +11,42 @@ function CreateNote() {
   const [content, setContent] = useState("");
 
   const createNote = async (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    const {
-      data: { user },
-    } = await supabase.auth.getUser();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
 
-    if (!user) {
-      navigate("/login");
-      return;
-    }
+  if (!user) {
+    navigate("/login");
+    return;
+  }
 
-    const { error } = await supabase
-      .from("notes")
-      .insert({
-        group_id: groupId,
-        created_by: user.id,
-        title: title,
-        content: content,
-        status: "PUBLISHED",
-      });
+  // Note expires after 24 hours
+  const expiresAt = new Date(
+    Date.now() + 24 * 60 * 60 * 1000
+  ).toISOString();
 
-    if (error) {
-      alert(error.message);
-      return;
-    }
+  const { error } = await supabase
+    .from("notes")
+    .insert({
+      group_id: groupId,
+      created_by: user.id,
+      title: title,
+      content: content,
+      status: "PUBLISHED",
+      expires_at: expiresAt,
+    });
 
-    alert("Note published!");
+  if (error) {
+    alert(error.message);
+    return;
+  }
 
-    navigate(`/group/${groupId}`);
-  };
+  alert("Note published! It will be available for 24 hours.");
+
+  navigate(`/group/${groupId}`);
+};
 
   return (
     <div className="create-note-page">
