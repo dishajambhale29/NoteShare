@@ -16,7 +16,6 @@ function App() {
 
       <Routes>
 
-        {/* Public Pages */}
         <Route path="/" element={<Login />} />
 
         <Route path="/login" element={<Login />} />
@@ -24,7 +23,7 @@ function App() {
         <Route path="/register" element={<Register />} />
 
 
-        {/* Protected Pages */}
+  
         <Route
           path="/dashboard"
           element={

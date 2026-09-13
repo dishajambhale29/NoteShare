@@ -134,7 +134,6 @@ function Dashboard() {
   await loadGroups(user.id);
 };
 
-  // ================= LOGOUT =================
   const logout = async () => {
     await supabase.auth.signOut();
     navigate("/login");
@@ -188,7 +187,7 @@ function Dashboard() {
 
         </div>
 
-        {/* JOIN GROUP */}
+      
         <div className="action-card">
 
           <h2>Join a group</h2>

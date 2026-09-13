@@ -32,24 +32,21 @@ function Login() {
   return (
     <div className="login-page">
 
-      {/* ================= LOGIN CARD ================= */}
-      <div className="login-card">
 
-  
+      <div className="login-card">
         <h1>Shared Notepad</h1>
 
         <p className="login-subtitle">
           Welcome back! Sign in to continue.
         </p>
 
-        {/* Error Message */}
         {message && (
           <div className="login-error">
             {message}
           </div>
         )}
 
-        {/* ================= FORM ================= */}
+       
         <form onSubmit={handleLogin}>
 
           <div className="input-group-custom">
@@ -85,7 +82,6 @@ function Login() {
 
         </form>
 
-        {/* ================= REGISTER ================= */}
         <div className="register-section">
 
           <span>Don't have an account?</span>

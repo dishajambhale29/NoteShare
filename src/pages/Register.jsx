@@ -53,15 +53,14 @@ function Register() {
 
       <div className="register-card">
 
-    
-        {/* Heading */}
+  
         <h1>Create Account</h1>
 
         <p className="register-subtitle">
           Create your account to start sharing notes.
         </p>
 
-        {/* Message */}
+  
         {message && (
           <div className="register-message">
             {message}
@@ -72,7 +71,6 @@ function Register() {
 
         <form onSubmit={handleRegister}>
 
-          {/* Name */}
           <div className="register-input-group">
 
             <label>Name</label>
@@ -89,7 +87,7 @@ function Register() {
           </div>
 
 
-          {/* Email */}
+     
           <div className="register-input-group">
 
             <label>Email</label>
@@ -106,7 +104,6 @@ function Register() {
           </div>
 
 
-          {/* Password */}
           <div className="register-input-group">
 
             <label>Password</label>
@@ -132,9 +129,6 @@ function Register() {
           </button>
 
         </form>
-
-
-        {/* ================= LOGIN ================= */}
 
         <div className="login-section">
 

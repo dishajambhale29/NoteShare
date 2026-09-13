@@ -23,7 +23,7 @@ const NoteCard = ({ note }) => {
       >
         <div className="card-body p-4">
 
-          {/* Note Icon */}
+        
           <div
             className="d-flex align-items-center justify-content-center mb-3"
             style={{
@@ -38,7 +38,7 @@ const NoteCard = ({ note }) => {
             📝
           </div>
 
-          {/* Title */}
+    
           <h5
             className="fw-bold mb-2"
             style={{
@@ -49,7 +49,7 @@ const NoteCard = ({ note }) => {
             {note.title}
           </h5>
 
-          {/* Content */}
+      
           <p
             className="text-muted mb-4"
             style={{
@@ -61,7 +61,7 @@ const NoteCard = ({ note }) => {
             {note.content.length > 150 ? "..." : ""}
           </p>
 
-          {/* Buttons */}
+  
           <div className="d-flex gap-2">
 
             <button

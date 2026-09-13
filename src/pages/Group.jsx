@@ -39,20 +39,27 @@ function Group() {
     setGroup(data);
   };
 
-  const loadNotes = async () => {
-    const { data, error } = await supabase
-      .from("notes")
-      .select("*")
-      .eq("group_id", groupId)
-      .eq("status", "PUBLISHED")
-      .order("created_at", {
-        ascending: false,
-      });
 
-    if (!error) {
-      setNotes(data || []);
-    }
-  };
+const loadNotes = async () => {
+  const { data, error } = await supabase
+    .from("notes")
+    .select("*")
+    .eq("group_id", groupId)
+    .eq("status", "PUBLISHED")
+    .gt("expires_at", new Date().toISOString())
+    .order("created_at", {
+      ascending: false,
+    });
+
+  if (error) {
+    console.log("Error loading notes:", error);
+    return;
+  }
+
+  setNotes(data || []);
+};
+
+
 
   if (!group) {
     return (
@@ -69,7 +76,7 @@ function Group() {
 
       <div className="group-container">
 
-        {/* Group Header */}
+    
         <div className="group-header">
 
           <div className="group-info">
@@ -107,10 +114,9 @@ function Group() {
 
         </div>
 
-        {/* Divider */}
         <div className="group-divider"></div>
 
-        {/* Notes Heading */}
+    
         <div className="notes-heading">
           <div>
             <h2>Shared Notes</h2>
@@ -124,7 +130,6 @@ function Group() {
           </span>
         </div>
 
-        {/* Notes */}
         {notes.length === 0 ? (
 
           <div className="no-notes">
